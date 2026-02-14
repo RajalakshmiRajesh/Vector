@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roast My Code 🔥</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #918e5875, #ca4a88b6, #e25919);
+            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* --- UPDATED: MAIN TITLE MATCHES HERO TEXT --- */
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff; /* Crisp white */
+            /* Added the same yellow glow and shadow as the hero text */
+            text-shadow: 0 0 15px rgba(255, 230, 0, 0.8), 2px 2px 5px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .hero-text {
+            font-size: 30px;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 230, 0, 0.8), 2px 2px 5px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+        }
+
+        /* Running emojis */
+        .emoji {
+            position: fixed;
+            font-size: 80px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        img { margin: 10px; }
+
+        textarea {
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 14px;
+            width: 80%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #090909;
+            font-family: monospace;
+        }
+
+        button {
+            background-color: #f05b6a;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background-color: #bd4652;
+            transform: scale(1.05);
+        }
+
+        .roast-container {
+            background: rgba(248, 246, 248, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            color: #080808;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 700px;
+            border: 3px solid #080808;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            text-align: left;
+        }
+
+        .roast-title {
+            color: #ff4b5c;
+            margin-top: 0;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid #ccc4c4;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="emoji">😊</div>
+    <div class="emoji">😢</div>
+    <div class="emoji">😡</div>
+    <div class="emoji">🤗</div>
+    <div class="emoji">🎈</div>
+    <div class="emoji">👻</div>
+
+    <div class="container">
+        <h1>🔥 Roast My Code 🤖</h1>
+
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/6062/6062646.png" width="100">
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" width="60">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" width="60">
+            <img src="https://cdn-icons-png.flaticon.com/512/482/482458.png" width="60">
+        </div>
+
+        <p class="hero-text">Paste your questionable code below 😈</p>
+        
+        <form method="POST">
+            <textarea name="code" rows="10" placeholder="Paste your messy code here...">{{ request.form['code'] if request.form else '' }}</textarea>
+            <br><br>
+            <button type="submit">Roast It 🔥</button>
+        </form>
+
+        {% if roast %}
+        <div class="roast-container">
+            <h3 class="roast-title">💀 The Roast Report</h3>
+            <pre>{{ roast }}</pre>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        const emojis = document.querySelectorAll(".emoji");
+        emojis.forEach(emoji => {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let dx = (Math.random() - 0.5) * 2;
+            let dy = (Math.random() - 0.5) * 2;
+
+            function animate() {
+                x += dx;
+                y += dy;
+                if (x <= 0 || x >= window.innerWidth - 80) dx *= -1;
+                if (y <= 0 || y >= window.innerHeight - 80) dy *= -1;
+                emoji.style.left = x + "px";
+                emoji.style.top = y + "px";
+                requestAnimationFrame(animate);
+            }
+            animate();
+        });
+    </script>
+</body>
+</html>
