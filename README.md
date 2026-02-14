@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [Roast My Code] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [Vector]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Rajalakshmi R] - [Jain University]
+- Member 2: [Nandana U] - [Jain University]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[(https://vector-7exv.onrender.com/)]
 
 ### Project Description
-[2-3 lines about what your project does]
+[An AI-powered "Code Critic" that provides a humorous, multi-perspective intervention on your source code. It transforms boring syntax errors into a sharp, comedic dialogue between three distinct developer archetypes.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Learning to code is often lonely and dry. Standard compilers give robotic, unhelpful error messages that don't capture the "experience" of a real-world code review or the frustration of messy logic.]
 
 ### The Solution
-[How are you solving it?]
+[We built a web application that uses Large Language Models (LLMs) to "roast" user-submitted code. By personifying the feedback through a 13-year-old prodigy, a sarcastic mid-level dev, and an exhausted senior architect, we make code review entertaining and memorable.]
 
 ---
 
@@ -31,10 +31,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [Python, HTML5, CSS3, JavaScript.]
+- Frameworks used: [Flask (Backend).]
+- Libraries used: [groq (LLM Integration), python-dotenv (Security), gunicorn (Production Server).]
+- Tools used: [VS Code, Git, GitHub, Render (Deployment).]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,10 +46,10 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Multi-Persona Roasting: Generates a conversation between three different developer personalities for a diverse comedic experience]
+- Feature 2: [Dynamic UI: Features physics-based floating emojis that respond to the "chaos" of the code review.]
+- Feature 3: [Responsive Terminal Output: A styled "Roast Report" container that mimics a professional code audit gone wrong.]
+- Feature 4: [Instant LLM Feedback: Powered by Llama 3.3-70B via the Groq Cloud API for near-instant response times.]
 
 ---
 
@@ -58,14 +58,15 @@ List the key features of your project:
 ### For Software:
 
 #### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+# Clone the repository
+git clone https://github.com/RajalakshmiRajesh/Vector.git
+
+# Install required dependencies
+pip install -r requirements.txt
 
 #### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
+# Set your API Key in a .env file first
+python app.py
 
 ### For Hardware:
 
@@ -83,26 +84,26 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1907" height="921" alt="image" src="https://github.com/user-attachments/assets/0bc39945-00af-4da7-bd63-510fb84f2fa0" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+The Landing Page: Featuring the glowing 'Roast My Code' title and questionable code entry area.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1892" height="908" alt="image" src="https://github.com/user-attachments/assets/f781839a-4b97-42b2-98e5-b8c0e3d0dd47" />
+
+The Roast Report: Showing the AI-generated dialogue between the three developer personas.
+
+<img width="1899" height="904" alt="image" src="https://github.com/user-attachments/assets/4ca538a3-f7b1-416c-bbce-b0b2308235e6" />
+Interactive Elements: Floating emojis providing visual feedback on the user's coding 'sins'.
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+The user interacts with the Flask Frontend, which sends code to the Backend. The Backend calls the Groq API (Llama 3.3) and returns the formatted roast to the UI.
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+The workflow is a simple request-response cycle optimized for speed using the Groq high-speed inference engine.
 
 ---
 
@@ -137,7 +138,7 @@ List the key features of your project:
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:** `(https://vector-7exv.onrender.com/)`
 
 ##### Endpoints
 
@@ -155,12 +156,11 @@ List the key features of your project:
 ```
 
 **POST /api/endpoint**
-- **Description:** [What it does]
+- **Description:** [Submits code for roasting.]
 - **Request Body:**
 ```json
 {
-  "field1": "value1",
-  "field2": "value2"
+  "code": "print('hello world')"
 }
 ```
 - **Response:**
@@ -389,10 +389,10 @@ If you used AI tools during development, document them here for transparency:
 **Percentage of AI-generated code:** [Approximately X%]
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
+- Prompt engineering and persona design.
+- System integration and Render deployment troubleshooting.
+- UI layout and branding decisions.
+
 
 *Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
 
@@ -400,15 +400,15 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [Rajalakshmi R]: [Frontend design, CSS animations,and UI/UX styling]
+- [Nandana U]: [Backend development,Groq API integration, and Render deployment]
+
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT] License - see the [LICENSE](LICENSE) file for details.
 
 **Common License Options:**
 - MIT License (Permissive, widely used)
